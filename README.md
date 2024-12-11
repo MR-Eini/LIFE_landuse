@@ -1,5 +1,30 @@
 # Land Use Data Processing Pipeline
 
+This repository is part of the **Integrated Water Management in Lithuania** project. Learn more about the project here:
+
+- [Project Page](https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE22-IPE-LT-LIFE-SIP-Vanduo-101104645/integrated-water-management-in-lithuania)
+
+### Project Description
+
+The project implements the National Water Sector Plan, ensuring the elimination or mitigation of significant impacts of prevailing pressures and contributing to achieving good status of surface and marine waters. The initiative aligns with the Water Framework and Marine Strategy Framework Directives. Key highlights include:
+
+- Improving methods for assessing surface water bodies.
+- Developing tools and methodologies for pressure and impact analysis.
+- Setting environmental objectives using an ecosystem services approach.
+- Testing and demonstrating measures to address pressures deteriorating water quality.
+- Leveraging innovative technologies like remote sensing for pollution identification.
+
+### Code Developer
+
+- **Mohammad Reza Eini - SGGW**
+
+### Project Details
+
+- **Reference**: LIFE22-IPE-LT-LIFE-SIP-Vanduo/101104645
+- **Acronym**: LIFE22-IPE-LT-LIFE SIP Vanduo
+
+---
+
 Welcome to the **Land Use Data Processing Pipeline**! This repository provides scripts to automate the processing of spatial data, from filtering and merging GeoPackage layers to creating high-resolution raster files. The scripts are written in Python and leverage powerful geospatial libraries.
 
 ---
@@ -150,30 +175,3 @@ If the merged GeoPackage already exists, use this script for raster creation.
 - Ensure all paths in `settings.py` are valid before running scripts.
 - Output directories are automatically created if they do not exist.
 - Keep input GeoPackages consistent with the lookup table to avoid mismatches.
-
----
-
-## Project Reference
-
-This repository is part of the **Integrated Water Management in Lithuania** project. Learn more about the project here:
-
-- [Project Page](https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE22-IPE-LT-LIFE-SIP-Vanduo-101104645/integrated-water-management-in-lithuania)
-
-### Project Description
-
-The project implements the National Water Sector Plan, ensuring the elimination or mitigation of significant impacts of prevailing pressures and contributing to achieving good status of surface and marine waters. The initiative aligns with the Water Framework and Marine Strategy Framework Directives. Key highlights include:
-
-- Improving methods for assessing surface water bodies.
-- Developing tools and methodologies for pressure and impact analysis.
-- Setting environmental objectives using an ecosystem services approach.
-- Testing and demonstrating measures to address pressures deteriorating water quality.
-- Leveraging innovative technologies like remote sensing for pollution identification.
-
-### Code Developer
-
-- **Mohammad Reza Eini - SGGW**
-
-### Project Details
-
-- **Reference**: LIFE22-IPE-LT-LIFE-SIP-Vanduo/101104645
-- **Acronym**: LIFE22-IPE-LT-LIFE SIP Vanduo
