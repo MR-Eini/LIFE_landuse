@@ -1,0 +1,4 @@
+G:\LIFE_AAA\swat_lt\WPy64-3860\python-3.8.6.amd64\python.exe   main.py
+
+
+G:\LIFE_AAA\swat_lt\WPy64-3860\python-3.8.6.amd64\python.exe   comparison.py
