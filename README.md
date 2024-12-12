@@ -47,7 +47,6 @@ Welcome to the **Land Use Data Processing Pipeline**! This repository provides s
 5. [Error Handling](#error-handling)
 6. [Input and Output Details](#input-and-output-details)
 7. [Notes](#notes)
-8. [Project Reference](#project-reference)
 
 ---
 
