@@ -109,7 +109,7 @@ Prepare an Excel file with columns:
 ## Usage
 
 ```bash
-python landuse_raster_processing.py
+python main.py
 ```
 
 ## Processing Steps
