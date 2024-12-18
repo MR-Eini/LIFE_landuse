@@ -1,44 +1,17 @@
-# Land Use Data Processing Pipeline
+# LIFE Land Use Data Processing Pipeline
 
-This repository is part of the **Integrated Water Management in Lithuania** project. Learn more about the project here:
-
-- [Project Page](https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE22-IPE-LT-LIFE-SIP-Vanduo-101104645/integrated-water-management-in-lithuania)
-
-### Project Description
-
-The project implements the National Water Sector Plan, ensuring the elimination or mitigation of significant impacts of prevailing pressures and contributing to achieving good status of surface and marine waters. The initiative aligns with the Water Framework and Marine Strategy Framework Directives. Key highlights include:
-
-- Improving methods for assessing surface water bodies.
-- Developing tools and methodologies for pressure and impact analysis.
-- Setting environmental objectives using an ecosystem services approach.
-- Testing and demonstrating measures to address pressures deteriorating water quality.
-- Leveraging innovative technologies like remote sensing for pollution identification.
-
-### Code Developer
-
-- **Mohammad Reza Eini - SGGW**
-
-### Project Details
-
-- **Reference**: LIFE22-IPE-LT-LIFE-SIP-Vanduo/101104645
-- **Acronym**: LIFE22-IPE-LT-LIFE SIP Vanduo
-
----
-
-Welcome to the **Land Use Data Processing Pipeline**! This repository provides scripts to automate the processing of spatial data, from filtering and merging GeoPackage layers to creating high-resolution raster files. The scripts are written in Python and leverage powerful geospatial libraries.
-
-# Land Use Data Processing Pipeline
-
-![Project Logo](https://via.placeholder.com/150)
+![Project Logo](https://via.placeholder.com/150](https://webgate.ec.europa.eu/life/publicWebsite/assets/life/images/logoLife.png)
 
 ## Table of Contents
 - [Overview](#overview)
+- [Project Description](#project-description)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Processing Steps](#processing-steps)
+- [Code Structure](#code-structure)
 - [Outputs](#outputs)
 - [Logging](#logging)
 - [Troubleshooting](#troubleshooting)
@@ -47,7 +20,30 @@ Welcome to the **Land Use Data Processing Pipeline**! This repository provides s
 
 ## Overview
 
-The **Land Use Data Processing Pipeline** is a comprehensive Python-based workflow designed to process, analyze, and rasterize various land use datasets. It leverages powerful geospatial libraries to filter, clean, and merge vector data from multiple sources, ultimately producing a prioritized combined raster dataset. This pipeline is ideal for environmental analysis, urban planning, and geographic information system (GIS) applications.
+Welcome to the **LIFE Land Use Data Processing Pipeline**! This repository is an integral part of the **Integrated Water Management in Lithuania** project. It provides scripts to automate the processing of spatial data, from filtering and merging GeoPackage layers to creating high-resolution raster files. The scripts are written in Python and leverage powerful geospatial libraries to ensure efficient and accurate data handling.
+
+## Project Description
+
+The **Integrated Water Management in Lithuania** project aims to implement the National Water Sector Plan, ensuring the elimination or mitigation of significant impacts of prevailing pressures and contributing to achieving good status of surface and marine waters. This initiative aligns with the Water Framework Directive (WFD) and Marine Strategy Framework Directive (MSFD). Key objectives of the project include:
+
+- **Improving Assessment Methods:** Enhancing techniques for evaluating surface water bodies.
+- **Developing Tools & Methodologies:** Creating advanced tools for pressure and impact analysis on water bodies.
+- **Setting Environmental Objectives:** Utilizing an ecosystem services approach to establish clear environmental goals.
+- **Testing Measures:** Demonstrating effective measures to address pressures that deteriorate water quality.
+- **Innovative Technologies:** Implementing remote sensing technologies for pollution identification and monitoring.
+
+### Learn More
+
+- [Project Page](https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE22-IPE-LT-LIFE-SIP-Vanduo-101104645/integrated-water-management-in-lithuania)
+
+## Code Developer
+
+- **Mohammad Reza Eini - SGGW**
+
+## Project Details
+
+- **Reference:** LIFE22-IPE-LT-LIFE-SIP-Vanduo/101104645
+- **Acronym:** LIFE22-IPE-LT-LIFE SIP Vanduo
 
 ## Features
 
@@ -72,6 +68,5 @@ Before setting up the pipeline, ensure that your system meets the following requ
 1. **Clone the Repository**
    
    ```bash
-   git clone https://github.com/yourusername/land-use-processing-pipeline.git
-   cd land-use-processing-pipeline
-
+   git clone https://github.com/MR-Eini/LIFE_landuse.git
+   cd LIFE_landuse
