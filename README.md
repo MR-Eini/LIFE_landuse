@@ -160,3 +160,48 @@ Contributions are welcome! Please:
 
 
 **Note:** This project is part of the LIFE Programme, a EU funding instrument supporting environmental and climate action projects.
+
+
+```
+life-landuse-processing/
+│
+├── main/
+│   └── landuse_raster_processing.py
+│
+├── settings.py
+│
+├── data/
+│   ├── input/
+│   │   ├── crops2024.gpkg
+│   │   ├── forest2022.gpkg
+│   │   ├── VMT_MKD.gdb
+│   │   ├── abandoned_2024.gpkg
+│   │   ├── gdr2024.gpkg
+│   │   └── imperv2024.gpkg
+│   │
+│   └── lookup_table.xlsx
+│
+├── output/
+│   ├── rasters/
+│   │   ├── Crops2024_filtered.tif
+│   │   ├── forest2022_filtered.tif
+│   │   └── ...
+│   │
+│   ├── combined_raster.tif
+│   └── process_landuse_r.log
+│
+├── requirements.txt
+│
+├── README.md
+│
+└── .gitignore
+```
+
+## Directory Explanation
+
+- `main/`: Contains the primary processing script
+- `settings.py`: Configuration file for paths and parameters
+- `data/input/`: Source geospatial and lookup data
+- `output/`: Generated raster files and processing logs
+- `requirements.txt`: Python package dependencies
+- `README.md`: Project documentation
