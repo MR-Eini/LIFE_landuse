@@ -27,150 +27,51 @@ The project implements the National Water Sector Plan, ensuring the elimination 
 
 Welcome to the **Land Use Data Processing Pipeline**! This repository provides scripts to automate the processing of spatial data, from filtering and merging GeoPackage layers to creating high-resolution raster files. The scripts are written in Python and leverage powerful geospatial libraries.
 
----
+# Land Use Data Processing Pipeline
+
+![Project Logo](https://via.placeholder.com/150)
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Processing Steps](#processing-steps)
+- [Outputs](#outputs)
+- [Logging](#logging)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+The **Land Use Data Processing Pipeline** is a comprehensive Python-based workflow designed to process, analyze, and rasterize various land use datasets. It leverages powerful geospatial libraries to filter, clean, and merge vector data from multiple sources, ultimately producing a prioritized combined raster dataset. This pipeline is ideal for environmental analysis, urban planning, and geographic information system (GIS) applications.
 
 ## Features
 
-- **Automated Workflow**: Process, merge, and rasterize GeoPackage layers.
-- **Configurable**: Centralized settings for input/output paths and parameters.
-- **High-Resolution Output**: Generates raster files with a resolution of 5 meters.
-- **Error Handling**: Clear and informative error messages to streamline debugging.
+- **Data Loading & Validation:** Efficiently loads and validates multiple GeoPackage layers and lookup tables.
+- **Geometry Cleaning:** Removes duplicate and invalid geometries, ensuring data integrity.
+- **Coordinate Reference System (CRS) Management:** Ensures all spatial data layers share a consistent CRS.
+- **Priority-Based Union:** Merges multiple layers based on predefined priority to resolve overlaps.
+- **Rasterization:** Converts vector data into raster format with customizable resolution.
+- **Combined Raster Output:** Generates a single raster dataset that integrates all processed layers based on priority.
+- **Comprehensive Logging:** Tracks processing steps and errors for easy debugging and monitoring.
+- **Memory Management:** Utilizes garbage collection to optimize memory usage during processing.
 
----
+## Prerequisites
 
-## Table of Contents
+Before setting up the pipeline, ensure that your system meets the following requirements:
 
-1. [Files Overview](#files-overview)
-2. [Dependencies](#dependencies)
-3. [Workflow](#workflow)
-4. [Important Functions](#important-functions)
-5. [Error Handling](#error-handling)
-6. [Input and Output Details](#input-and-output-details)
-7. [Notes](#notes)
+- **Operating System:** Windows, macOS, or Linux
+- **Python Version:** Python 3.8 or higher
 
----
+## Installation
 
-## Files Overview
+1. **Clone the Repository**
+   
+   ```bash
+   git clone https://github.com/yourusername/land-use-processing-pipeline.git
+   cd land-use-processing-pipeline
 
-### 1. **Main Script: `main.py`**
-   - **Purpose**: Orchestrates the entire processing pipeline.
-   - **Key Functions**:
-     - Load data.
-     - Filter and process GeoPackage layers.
-     - Merge processed layers.
-     - Rasterize merged data to create a GeoTIFF file.
-
-### 2. **Standalone Script: `Standalone_Rasterization_Script.py`**
-   - **Purpose**: Focused script for converting merged GeoPackages to raster files.
-   - **Ideal Use Case**: Standalone rasterization tasks.
-
-### 3. **Settings File: `settings.py`**
-   - **Purpose**: Configurable file for specifying paths to inputs, outputs, and essential parameters.
-
----
-
-## Dependencies
-
-Ensure the following Python libraries are installed:
-
-```bash
-pip install geopandas rasterio pandas numpy
-```
-
-- `GeoPandas`: For vector data processing.
-- `Rasterio`: For raster data handling.
-- `Pandas`: For table manipulation and lookups.
-- `NumPy`: For numerical computations.
-- `os`: For file and directory operations.
-
----
-
-## Workflow
-
-### Step 1: Setup Configuration
-
-Update `settings.py` with correct paths:
-
-- **Input Layers**:
-  ```python
-  input_layers = {
-      "crops": "path_to_Crops2024.gpkg",
-      "forest": "path_to_Forest2024.gpkg",
-  }
-  ```
-- **Output Paths**:
-  ```python
-  output_dir = "path_to_output_directory"
-  ```
-- **Reference Raster**:
-  ```python
-  input_raster = "path_to_reference_raster.tif"
-  ```
-- **Lookup Table**:
-  An Excel file mapping land-use (LU) codes to `raster_id`.
-
-### Step 2: Run `main.py`
-
-1. **Key Steps**:
-   - Load CRS: Reads the coordinate reference system from the input raster.
-   - Filter and Process Layers: Filters layers based on criteria and computes new attributes like `LU`.
-   - Merge Layers: Combines processed layers into a single GeoPackage.
-   - Rasterize: Converts the merged GeoPackage into a GeoTIFF file at 5-meter resolution.
-
-2. **Outputs**:
-   - Processed GeoPackages for each layer.
-   - Merged GeoPackage (`Merged_Landuse.gpkg`).
-   - Final raster (`Merged_Landuse.tif`).
-
-### Optional Step 3: Use `Standalone_Rasterization_Script.py`
-
-If the merged GeoPackage already exists, use this script for raster creation.
-
----
-
-## Important Functions
-
-### 1. `convert_to_raster`
-   - **Purpose**: Converts vector data into raster format.
-   - **Inputs**:
-     - `merged_gpkg_path`: Path to the merged GeoPackage.
-     - `output_tif_path`: Path for the output raster.
-     - `reference_raster_path`: Reference raster for CRS and extent.
-     - `resolution`: Raster resolution (default: 5 meters).
-
-### 2. Processing Steps in `main.py`
-   - **Example**:
-     - The `crops` layer excludes rows with `KODAS` values of "NEP" or "TPN".
-
----
-
-## Error Handling
-
-- **Missing Columns**:
-  - Scripts will raise errors if required columns are absent.
-  - Example: `KeyError: 'Required columns zkg or VMR are missing'`
-
-- **Lookup Failures**:
-  - If LU codes do not match the lookup table, rows may have `NaN` in `raster_id`.
-
----
-
-## Input and Output Details
-
-- **Input Files**:
-  - GeoPackage or GeoDatabase layers (e.g., crops, forest).
-  - Reference raster for CRS and extent.
-  - Lookup table mapping LU codes to `raster_id`.
-
-- **Output Files**:
-  - Processed GeoPackages for each layer.
-  - Merged GeoPackage (`Merged_Landuse.gpkg`).
-  - Raster file (`Merged_Landuse.tif`).
-
----
-
-## Notes
-
-- Ensure all paths in `settings.py` are valid before running scripts.
-- Output directories are automatically created if they do not exist.
-- Keep input GeoPackages consistent with the lookup table to avoid mismatches.
