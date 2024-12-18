@@ -166,7 +166,7 @@ Contributions are welcome! Please:
 life-landuse-processing/
 │
 ├── main/
-│   └── landuse_raster_processing.py
+│   └── main.py
 │
 ├── settings.py
 │
