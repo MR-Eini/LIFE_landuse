@@ -70,3 +70,38 @@ Before setting up the pipeline, ensure that your system meets the following requ
    ```bash
    git clone https://github.com/MR-Eini/LIFE_landuse.git
    cd LIFE_landuse
+
+
+LIFE_landuse/
+├── rasters/
+│   ├── Crops2024_filtered.tif
+│   ├── forest2022_filtered.tif
+│   ├── Misko_sklypai_filtered.tif
+│   ├── abandoned_2024_filtered.tif
+│   ├── gdr2024_filtered.tif
+│   └── imperv2024_filtered.tif
+├── output/
+│   ├── Crops2024_filtered.gpkg
+│   ├── forest2022_filtered.gpkg
+│   ├── Misko_sklypai_filtered.gpkg
+│   ├── abandoned_2024_filtered.gpkg
+│   ├── gdr2024_filtered.gpkg
+│   ├── imperv2024_filtered.gpkg
+│   ├── merged.gpkg
+│   ├── combined_raster.tif
+│   └── process_landuse_r.log
+├── scripts/
+│   ├── process_landuse.py
+│   └── settings.py
+├── data/
+│   ├── boundary.gpkg
+│   ├── Crops2024.gpkg
+│   ├── forest2022.gpkg
+│   ├── VMT_MKD.gdb
+│   ├── abandoned_2024.gpkg
+│   ├── gdr2024.gpkg
+│   ├── imperv2024.gpkg
+│   └── lookup_table.xlsx
+├── requirements.txt
+├── README.md
+└── LICENSE
