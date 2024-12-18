@@ -1,8 +1,47 @@
-# Land Use Raster Processing Script
+![Project Logo](https://webgate.ec.europa.eu/life/publicWebsite/assets/life/images/logoLife.png)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Project Description](#project-description)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Processing Steps](#processing-steps)
+- [Code Structure](#code-structure)
+- [Outputs](#outputs)
+- [Logging](#logging)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
 
 ## Overview
 
-This Python script is designed for comprehensive geospatial data processing, specifically for handling multiple land use datasets, filtering, merging, and converting them into a single priority-based raster file.
+Welcome to the **LIFE Land Use Data Processing Pipeline**! This repository is an integral part of the **Integrated Water Management in Lithuania** project. It provides scripts to automate the processing of spatial data, from filtering and merging GeoPackage layers to creating high-resolution raster files. The scripts are written in Python and leverage powerful geospatial libraries to ensure efficient and accurate data handling.
+
+## Project Description
+
+The **Integrated Water Management in Lithuania** project aims to implement the National Water Sector Plan, ensuring the elimination or mitigation of significant impacts of prevailing pressures and contributing to achieving good status of surface and marine waters. This initiative aligns with the Water Framework Directive (WFD) and Marine Strategy Framework Directive (MSFD). Key objectives of the project include:
+
+- **Improving Assessment Methods:** Enhancing techniques for evaluating surface water bodies.
+- **Developing Tools & Methodologies:** Creating advanced tools for pressure and impact analysis on water bodies.
+- **Setting Environmental Objectives:** Utilizing an ecosystem services approach to establish clear environmental goals.
+- **Testing Measures:** Demonstrating effective measures to address pressures that deteriorate water quality.
+- **Innovative Technologies:** Implementing remote sensing technologies for pollution identification and monitoring.
+
+### Learn More
+
+- [Project Page](https://webgate.ec.europa.eu/life/publicWebsite/project/LIFE22-IPE-LT-LIFE-SIP-Vanduo-101104645/integrated-water-management-in-lithuania)
+
+## Code Developer
+
+- **Mohammad Reza Eini - SGGW**
+
+## Project Details
+
+- **Reference:** LIFE22-IPE-LT-LIFE-SIP-Vanduo/101104645
+- **Acronym:** LIFE22-IPE-LT-LIFE SIP Vanduo
 
 ## Features
 
@@ -82,7 +121,15 @@ python landuse_raster_processing.py
 5. Rasterize layers (default 5m resolution)
 6. Create a combined priority raster
 
-## Output
+## Code Structure
+
+The script is organized into several key sections:
+- Utility functions for file and geometry handling
+- Individual dataset processing functions
+- Rasterization and priority-based merging logic
+- Comprehensive logging and error handling
+
+## Outputs
 
 - Filtered GeoPackage files for each land use dataset
 - Individual raster files for each dataset
@@ -96,32 +143,20 @@ Logging is configured to:
 - Save detailed logs to `output/process_landuse_r.log`
 - Track processing steps, warnings, and errors
 
-## Customization
-
-- Modify `raster_resolution` to change output resolution
-- Adjust `priority_layers` to change layer merging priority
-- Edit filtering criteria in individual processing steps
-
-## Error Handling
-
-The script includes comprehensive error handling:
-- CRS validation and reprojection
-- Geometry cleaning
-- Invalid data filtering
-- Detailed logging of processing issues
-
-## Performance Notes
-
-- Uses garbage collection for memory management
-- Supports large geospatial datasets
-- Configurable processing for different land use types
-
 ## Troubleshooting
 
 - Ensure all input paths are correct
 - Check input data CRS and geometry validity
 - Review log file for detailed error information
+- Verify Python and library versions compatibility
 
-## Contributors
+## Contributing
 
-Mohammad Reza Eini - Warsaw University of Life Sciences 
+Contributions are welcome! Please:
+- Fork the repository
+- Create a feature branch
+- Submit a pull request
+- Ensure code follows project's coding standards
+
+
+**Note:** This project is part of the LIFE Programme, a EU funding instrument supporting environmental and climate action projects.
