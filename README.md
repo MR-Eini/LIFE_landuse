@@ -1,6 +1,6 @@
 # LIFE Land Use Data Processing Pipeline
 
-![Project Logo](https://via.placeholder.com/150](https://webgate.ec.europa.eu/life/publicWebsite/assets/life/images/logoLife.png)
+![Project Logo](https://webgate.ec.europa.eu/life/publicWebsite/assets/life/images/logoLife.png)
 
 ## Table of Contents
 - [Overview](#overview)
