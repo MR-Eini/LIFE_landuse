@@ -1,6 +1,6 @@
-# Path to the reference raster file
-# Used for setting CRS and aligning outputs
-input_raster = r"D:\Users\MRE\Scripts\Landuse_update\LUraster_bck.tif"
+# Path to the boundary GeoPackage file
+# Used for setting CRS and defining rasterization extent
+boundary_gpkg = r"D:\Users\MRE\Scripts\Landuse_update\boundary.gpkg"
 
 # Directory for the output files
 # All processed GeoPackages and the final raster will be saved here
